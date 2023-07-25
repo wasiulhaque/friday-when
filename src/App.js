@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import Tooltip from "@mui/material/Tooltip";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -76,15 +77,19 @@ function App() {
       <header className="App-header">
         <DaysUntilFriday />
         <FormGroup>
-          <FormControlLabel
-            control={
-              <MaterialUISwitch
-                sx={{ m: 1 }}
-                checked={darkMode}
-                onClick={toggleDarkMode}
-              />
-            }
-          />
+          <Tooltip
+            title={`${darkMode ? "Enable Light Mode" : "Enable Dark Mode"}`}
+          >
+            <FormControlLabel
+              control={
+                <MaterialUISwitch
+                  sx={{ m: 1 }}
+                  checked={darkMode}
+                  onClick={toggleDarkMode}
+                />
+              }
+            />
+          </Tooltip>
         </FormGroup>
       </header>
     </div>
