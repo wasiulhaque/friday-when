@@ -69,6 +69,7 @@ const DaysUntilFriday = () => {
           )}
         </p>
       )}
+      {timeUntilFriday == null && <p>Friday wen?</p>}
     </div>
   );
 };
