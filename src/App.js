@@ -86,6 +86,7 @@ function App() {
                   sx={{ m: 1 }}
                   checked={darkMode}
                   onClick={toggleDarkMode}
+                  id="switch"
                 />
               }
             />
