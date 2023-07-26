@@ -41,3 +41,36 @@
   background-color: #000; /* Black background color in dark mode */
   color: #fff; /* White text color in dark mode */
 }
+
+.dark-mode .FormControl {
+  color: #fff; /* Set the text color to white for FormControl and its children */
+}
+
+.dark-mode .MuiInputLabel-root {
+  color: #fff; /* Set the text color to white for InputLabel */
+}
+
+.dark-mode .MuiInputBase-input {
+  color: #fff; /* Set the text color to white for InputBase component */
+}
+
+.dark-mode .MuiSelect-root,
+.dark-mode .MuiSelect-root:focus,
+.dark-mode .MuiSelect-root:visited,
+.dark-mode .MuiSelect-root:hover,
+.dark-mode .MuiSelect-root.Mui-focused {
+  color: #fff; /* Set the text color to white for the Select component and its states */
+}
+
+/* Additional styles for making the Select element white in dark mode */
+.dark-mode .MuiSelect-root {
+  background-color: #fff; /* Set the background color of the Select element to white */
+}
+
+.dark-mode .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* Set the border color of the outlined Select element to white */
+}
+
+.dark-mode .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* Set the border color of the focused outlined Select element to white */
+}

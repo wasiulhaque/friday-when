@@ -1,5 +1,5 @@
 import "./App.css";
-import DaysUntilFriday from "./components/DaysUntilFriday";
+import DaysUntilFriday from "./components/DaysUntilWeekend";
 import { useState, useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import FormGroup from "@mui/material/FormGroup";
