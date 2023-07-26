@@ -86,6 +86,8 @@ const DaysUntilFriday = () => {
             renderValue={(selected) => {
               if (selected == null) {
                 return <em>Weekend?</em>;
+              } else if (selected === "Thursday") {
+                return "পবিত্র বৃহস্পতিবার রাত";
               } else {
                 return selected;
               }
