@@ -9,9 +9,7 @@ const monthNames = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
-const monthNumber = monthNames.indexOf(monthString);
 
-currentDate.setMonth(monthNumber);
 
 // Format the date as "DD MMM YYYY"
 const formattedDate = currentDate.toLocaleDateString('en-US', {
@@ -22,12 +20,13 @@ const formattedDate = currentDate.toLocaleDateString('en-US', {
 let holidays =await getHoliday();
 export  default function holidaysList(){
     for(let i = 0; i<holidays.length; i++) {
-        currentDate.setDate(holidays[i]["number"])
-        const monthNumber = monthNames.indexOf(monthString);
-        currentDate.setMonth(monthNumber);
-        dateList.push(currentDate)
+        let date = new Date();
+        let monthNumber = monthNames.indexOf(holidays[i]["word"]);
+        date.setDate(parseInt(holidays[i]["number"]));
+        date.setMonth(monthNumber);
+        dateList.push(date)
     }
+    return dateList;
 }
 
-
-console.log(dateList)
+holidaysList();
