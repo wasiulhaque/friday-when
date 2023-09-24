@@ -74,6 +74,7 @@ function App() {
 
   return (
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
+      <div className="overlay"></div>
       <header className="App-header">
         <DaysUntilFriday />
         <FormGroup>
@@ -92,6 +93,12 @@ function App() {
             />
           </Tooltip>
         </FormGroup>
+        {/* <p>
+          <img
+            src="https://media.tenor.com/6GIi9tonjeEAAAAd/parkour-the-office.gif"
+            height="300px"
+          />
+        </p> */}
       </header>
     </div>
   );

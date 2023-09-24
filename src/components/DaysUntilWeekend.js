@@ -100,12 +100,11 @@ const DaysUntilFriday = () => {
             }}
             inputProps={{ "aria-label": "Without label" }}
           >
+            <MenuItem value={"Thursday"}>পবিত্র বৃহস্পতিবার রাত</MenuItem>
             <MenuItem value={"Friday"}>Friday</MenuItem>
             <MenuItem value={"Saturday"}>Saturday</MenuItem>
             <MenuItem value={"Sunday"}>Sunday</MenuItem>
-            <MenuItem value={"Thursday"}>পবিত্র বৃহস্পতিবার রাত</MenuItem>
             <MenuItem value={"Friday"} onClick={checkHolidays}>Govt Holiday</MenuItem>
-
           </Select>
         </FormControl>
       </div>

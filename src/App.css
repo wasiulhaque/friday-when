@@ -1,5 +1,11 @@
+
 .App {
   text-align: center;
+}
+
+.App-header {
+  position: relative;
+  z-index: 2; /* Make sure the header is above the overlay */
 }
 
 .App-logo {
@@ -14,7 +20,6 @@
 }
 
 .App-header {
-  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,9 +43,10 @@
 }
 
 .dark-mode .App-header {
-  background-color: #000; /* Black background color in dark mode */
+  background-color: rgba(0, 0, 0, 0.95);
   color: #fff; /* White text color in dark mode */
 }
+
 
 .dark-mode .FormControl {
   color: #fff; /* Set the text color to white for FormControl and its children */
@@ -73,4 +79,8 @@
 
 .dark-mode .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: #fff; /* Set the border color of the focused outlined Select element to white */
+}
+
+.dark-mode .MuiSelect-icon {
+  color: #fff; /* Set the color of the arrow icon to white */
 }
