@@ -3,7 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ConfettiExplosion from "react-confetti-explosion";
-import holidaysList from "./Datemap"
+import holidaysList from "./DateMap";
 import getHoliday from "./Holiday";
 
 const DaysUntilFriday = () => {
@@ -76,9 +76,9 @@ const DaysUntilFriday = () => {
     return () => clearInterval(interval);
   }, [day]); // Run the effect whenever the selected day changes
 
-  function checkHolidays(){
+  function checkHolidays() {
     for (let i = 0; i < 24; i++) {
-      console.log(holidaysList()[i].getDay())
+      console.log(holidaysList()[i].getDay());
     }
   }
   return (
@@ -104,7 +104,9 @@ const DaysUntilFriday = () => {
             <MenuItem value={"Friday"}>Friday</MenuItem>
             <MenuItem value={"Saturday"}>Saturday</MenuItem>
             <MenuItem value={"Sunday"}>Sunday</MenuItem>
-            <MenuItem value={"Friday"} onClick={checkHolidays}>Govt Holiday</MenuItem>
+            <MenuItem value={"Friday"} onClick={checkHolidays}>
+              Govt Holiday
+            </MenuItem>
           </Select>
         </FormControl>
       </div>
