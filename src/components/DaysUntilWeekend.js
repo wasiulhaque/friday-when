@@ -3,7 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ConfettiExplosion from "react-confetti-explosion";
-import holidaysList from "./DateMap";
+import holidaysList from "./Datemap";
 import getHoliday from "./Holiday";
 
 const DaysUntilFriday = () => {
