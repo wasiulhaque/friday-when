@@ -1,7 +1,6 @@
 import getHoliday from "./Holiday.js";
 const dayNumber = 21;
 const monthString = "Feb";
-let dateList = [];
 const currentDate = new Date();
 currentDate.setDate(dayNumber);
 
@@ -28,6 +27,8 @@ const formattedDate = currentDate.toLocaleDateString("en-US", {
 });
 let holidays = await getHoliday();
 export default function holidaysList() {
+  let dateList = [];
+
   for (let i = 0; i < holidays.length; i++) {
     let date = new Date();
     let monthNumber = monthNames.indexOf(holidays[i]["word"]);

@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ConfettiExplosion from "react-confetti-explosion";
 import holidaysList from "./Datemap";
-import getHoliday from "./Holiday";
+import getNearestHoliDay from "./holidayCalculation";
 
 const DaysUntilFriday = () => {
   const [timeUntilWeekend, settimeUntilWeekend] = useState(null);
@@ -76,9 +76,11 @@ const DaysUntilFriday = () => {
     return () => clearInterval(interval);
   }, [day]); // Run the effect whenever the selected day changes
 
+
+  let a =()=>{getNearestHoliDay(holidaysList())};
   function checkHolidays() {
     for (let i = 0; i < 24; i++) {
-      console.log(holidaysList()[i].getDay());
+      console.log(holidaysList()[i]);
     }
   }
   return (
@@ -104,7 +106,9 @@ const DaysUntilFriday = () => {
             <MenuItem value={"Friday"}>Friday</MenuItem>
             <MenuItem value={"Saturday"}>Saturday</MenuItem>
             <MenuItem value={"Sunday"}>Sunday</MenuItem>
-            <MenuItem value={"Friday"} onClick={checkHolidays}>
+            <MenuItem value={"Friday"} onClick={()=>{
+              getNearestHoliDay(holidaysList())
+            }}>
               Govt Holiday
             </MenuItem>
           </Select>
