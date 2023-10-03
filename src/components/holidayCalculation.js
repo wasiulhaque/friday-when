@@ -5,19 +5,27 @@ export default function getNearestHoliDay(Holidays) {
     const day = String(presentDay.getDate()).padStart(2, "0");
 
     let storedDay = 32;
-
+    let tempMonth = 14;
     console.log("Length :" + Holidays.length);
 
     for (let i = 0; i < Holidays.length; i++) {
         let temp = String(Holidays[i].getMonth() + 1).padStart(2, "0")
+        let tempDay = parseInt(String(Holidays[i].getDate()).padStart(2, "0"))
+        console.log(Holidays[i])
         temp = parseInt(temp)
-        let tempDay = parseInt(String(Holidays[i].getDate() ).padStart(2, "0"))
         if (temp > month || temp === month) {
-            if (tempDay > day) {
+            if (temp < tempMonth) {
+                console.log("Minimum month")
+                tempMonth = Math.min(temp, tempMonth)
+                storedDay = tempDay
+
+            } else if (temp === tempMonth && tempDay>day) {
                 storedDay = Math.min(storedDay, tempDay)
             }
+
         }
     }
-    return storedDay;
+    console.log(storedDay)
+    return new Date(year,tempMonth-1,storedDay);
 }
 
