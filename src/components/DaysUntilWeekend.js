@@ -42,7 +42,7 @@ const DaysUntilFriday = () => {
             } else if (day === "Thursday") {
                 daysLeft = (4 - currentDay + 7) % 7; // Calculate days left until Sunday (0)
             }
-            else if (day==="Holiday"){
+            else if (day==="Govt Holiday"){
                 if(holiday){
                     daysLeft=(holiday.getDate()-currentDay)
                 }
@@ -115,7 +115,7 @@ const DaysUntilFriday = () => {
                         <MenuItem value={"Friday"}>Friday</MenuItem>
                         <MenuItem value={"Saturday"}>Saturday</MenuItem>
                         <MenuItem value={"Sunday"}>Sunday</MenuItem>
-                        <MenuItem value={"Holiday"} onClick={() => {
+                        <MenuItem value={"Govt Holiday"} onClick={() => {
                             holiday= getNearestHoliDay(holidaysList())
                             setHoliday(holiday)
                         }}>
