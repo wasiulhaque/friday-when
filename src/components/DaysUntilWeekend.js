@@ -8,7 +8,9 @@ import getNearestHoliDay from "./holidayCalculation";
 
 const DaysUntilFriday = () => {
     const [timeUntilWeekend, settimeUntilWeekend] = useState(null);
-    const [day, setDay] = useState(null);
+    const [day, setDay] = useState('Friday');
+    let [holiday,setHoliday]=useState('')
+
     const handleChange = (event) => {
         const selectedDay = event.target.value;
         setDay(event.target.value);
@@ -39,6 +41,11 @@ const DaysUntilFriday = () => {
                 daysLeft = (7 - currentDay + 7) % 7; // Calculate days left until Sunday (0)
             } else if (day === "Thursday") {
                 daysLeft = (4 - currentDay + 7) % 7; // Calculate days left until Sunday (0)
+            }
+            else if (day==="Holiday"){
+                if(holiday){
+                    daysLeft=(holiday.getDate()-currentDay)
+                }
             }
 
             if (daysLeft != null) {
@@ -77,9 +84,7 @@ const DaysUntilFriday = () => {
     }, [day]); // Run the effect whenever the selected day changes
 
 
-    let a = () => {
-        getNearestHoliDay(holidaysList())
-    };
+
 
     function checkHolidays() {
         for (let i = 0; i < 24; i++) {
@@ -110,8 +115,9 @@ const DaysUntilFriday = () => {
                         <MenuItem value={"Friday"}>Friday</MenuItem>
                         <MenuItem value={"Saturday"}>Saturday</MenuItem>
                         <MenuItem value={"Sunday"}>Sunday</MenuItem>
-                        <MenuItem value={"Friday"} onClick={() => {
-                            console.log(getNearestHoliDay(holidaysList()))
+                        <MenuItem value={"Holiday"} onClick={() => {
+                            holiday= getNearestHoliDay(holidaysList())
+                            setHoliday(holiday)
                         }}>
                             Govt Holiday
                         </MenuItem>
