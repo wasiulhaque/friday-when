@@ -111,7 +111,7 @@ const DaysUntilFriday = () => {
             <MenuItem value={"Friday"}>Friday</MenuItem>
             <MenuItem value={"Saturday"}>Saturday</MenuItem>
             <MenuItem value={"Sunday"}>Sunday</MenuItem>
-            {/* <MenuItem
+            <MenuItem
               value={"Govt Holiday"}
               onClick={() => {
                 holiday = getNearestHoliDay(holidaysList());
@@ -119,7 +119,7 @@ const DaysUntilFriday = () => {
               }}
             >
               Govt Holiday
-            </MenuItem> */}
+            </MenuItem>
           </Select>
         </FormControl>
       </div>
