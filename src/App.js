@@ -109,6 +109,7 @@ function App() {
           </Tooltip>
         </FormGroup>
         <div
+          className="facebook-embed-container"
           style={{
             display: "flex",
             justifyContent: "center",

@@ -84,3 +84,26 @@
 .dark-mode .MuiSelect-icon {
   color: #fff; /* Set the color of the arrow icon to white */
 }
+
+.facebook-embed-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.facebook-embed-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide (typical mobile devices) */
+  .facebook-embed-container {
+    width: 100%; /* Set the width to 100% to fit the entire post on the screen */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    transform: scale(0.8); /* Adjust the scale as needed to make the content smaller (0.8 makes it 80% of the original size) */
+    transform-origin: top center; /* Adjust the transformation origin as needed */
+  }
+}
