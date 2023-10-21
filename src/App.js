@@ -6,6 +6,21 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import Tooltip from "@mui/material/Tooltip";
+import { FacebookEmbed } from "react-social-media-embed";
+
+const postUrls = [
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0ud7mznvuNh8iVtjuBj1Egx3q5JV9KhdC82tpmqXw7zHcMa4AQCFbyMz1w516iJHPl",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0qXUb1ndKEzuYd6YcyPUFUPUsyxhGertEkEftxfUiLLUwJwWbsE8GA62x3FvKrNSZl",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid022h6K3cCrUaH6u12m7m6Cctt2GL5i9t91Gj9ctjhTsTiw8pCvfGL4oeDBjBzqizG1l",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0HfyA7Fmx1r4uAKH3CF6EPsXSyix2fBtXpBWqnQVkGrBWjE4UuvoBDzXWjPFfLvUol",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid02NTMvxouLeKMp7hzfDHSZdoL9ACw3KXWaoxi7PSwN4QNeBofm2esXZnrs7qNHKagHl",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0jZptSLtcxJJPZeDqjEZ8mYKRKu5t6edbUKcLCvXAtzwBkgvPzwajJYLg7SdUfNWul",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0mo8ZgJVn9N9ou8mhYyX54HSyAqt3NwUDMpWjFGR2EZJj8qBEJTYmDZtAJZLS4NFTl",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0ZdrPXUREjQYN8Cdqar6PKE4gt7c1TzX8cw7YoTbzHN7TdGagrt6Kq7hXgdBSqvDkl",
+  "https://www.facebook.com/tanvir.sultan.mba/posts/pfbid0XkKCaCRHaSsWbPWf2kZC5UnG6Xv5bUpy5fHBmPyQDdEMpQpcju5qPKC4qMU66rzol",
+];
+
+const randomPostUrl = postUrls[Math.floor(Math.random() * postUrls.length)];
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -93,6 +108,15 @@ function App() {
             />
           </Tooltip>
         </FormGroup>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "20px",
+          }}
+        >
+          <FacebookEmbed url={randomPostUrl} width={550} />
+        </div>
         {/* <p>
           <img
             src="https://media.tenor.com/6GIi9tonjeEAAAAd/parkour-the-office.gif"
