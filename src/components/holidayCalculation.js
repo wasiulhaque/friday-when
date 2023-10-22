@@ -14,6 +14,7 @@ export default function getNearestHoliDay(Holidays) {
         if (temp > month || temp === month) {
             if (temp < tempMonth) {
                 tempMonth = Math.min(temp, tempMonth)
+                console.log(tempMonth)
                 storedDay = tempDay
 
             } else if (temp === tempMonth && tempDay>day) {
@@ -22,6 +23,7 @@ export default function getNearestHoliDay(Holidays) {
 
         }
     }
+
     return new Date(year,tempMonth-1,storedDay);
 }
 
