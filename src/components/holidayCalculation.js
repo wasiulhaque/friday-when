@@ -25,5 +25,4 @@ export default function getNearestHoliDay(Holidays) {
     }
 
     return new Date(year,tempMonth-1,storedDay);
-}
 
