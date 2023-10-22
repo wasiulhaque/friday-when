@@ -44,7 +44,7 @@ const DaysUntilFriday = () => {
             }
             else if (day==="Govt Holiday"){
                 if(holiday){
-                    daysLeft=(holiday.getDate()-currentDay)
+                    daysLeft=(holiday.getDate()-now.getDate())
                 }
             }
 
