@@ -1,3 +1,4 @@
+
 let holidayString =
   "21 FebTueShaheed Day 17 MarFriSheikh Mujibur Rahman's Birthday 14 AprFriBengali New Year 21 AprFri" +
   "Jumatul Bidah 22 AprSatEid ul-Fitr 1 MayMonMay Day 28 JunWedEid ul-Adha Holiday 30 JunFriEid ul-Adha Holiday 15 AugTueNational Mourning Day 28 SepThu" +
@@ -9,3 +10,4 @@ let holidayString =
 export default function getString() {
   return holidayString;
 }
+

@@ -84,6 +84,93 @@
 .dark-mode .MuiSelect-icon {
   color: #fff; /* Set the color of the arrow icon to white */
 }
+=======
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  position: relative;
+  z-index: 2; /* Make sure the header is above the overlay */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dark-mode .App-header {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff; /* White text color in dark mode */
+}
+
+
+.dark-mode .FormControl {
+  color: #fff; /* Set the text color to white for FormControl and its children */
+}
+
+.dark-mode .MuiInputLabel-root {
+  color: #fff; /* Set the text color to white for InputLabel */
+}
+
+.dark-mode .MuiInputBase-input {
+  color: #fff; /* Set the text color to white for InputBase component */
+}
+
+.dark-mode .MuiSelect-root,
+.dark-mode .MuiSelect-root:focus,
+.dark-mode .MuiSelect-root:visited,
+.dark-mode .MuiSelect-root:hover,
+.dark-mode .MuiSelect-root.Mui-focused {
+  color: #fff; /* Set the text color to white for the Select component and its states */
+}
+
+/* Additional styles for making the Select element white in dark mode */
+.dark-mode .MuiSelect-root {
+  background-color: #fff; /* Set the background color of the Select element to white */
+}
+
+.dark-mode .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* Set the border color of the outlined Select element to white */
+}
+
+.dark-mode .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #fff; /* Set the border color of the focused outlined Select element to white */
+}
+
+.dark-mode .MuiSelect-icon {
+  color: #fff; /* Set the color of the arrow icon to white */
+}
 
 .facebook-embed-container {
   display: flex;

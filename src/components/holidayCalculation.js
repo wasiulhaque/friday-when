@@ -15,11 +15,9 @@ export default function getNearestHoliDay(Holidays) {
             if (temp < tempMonth) {
                 tempMonth = Math.min(temp, tempMonth)
                 storedDay = tempDay
-
             } else if (temp === tempMonth && tempDay>day) {
                 storedDay = Math.min(storedDay, tempDay)
             }
-
         }
     }
     return new Date(year,tempMonth-1,storedDay);
