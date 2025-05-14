@@ -94,9 +94,9 @@ const DaysUntilFriday = () => {
         justifyContent="center"
         sx={{ width: "100%" }}
       >
-        <FormControl sx={{ minWidth: 150 }}>
+        <FormControl sx={{ width: 180, maxWidth: 180 }}>
           <Select value={day} onChange={(e) => setDay(e.target.value)}>
-            <MenuItem value="Thursday">পবিত্র বৃহস্পতিবার রাত</MenuItem>
+            <MenuItem value="Thursday">পবিত্র বৃহস্পতিবার</MenuItem>
             <MenuItem value="Friday">Friday</MenuItem>
             <MenuItem value="Saturday">Saturday</MenuItem>
             <MenuItem value="Sunday">Sunday</MenuItem>

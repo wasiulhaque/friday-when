@@ -7,6 +7,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import Tooltip from "@mui/material/Tooltip";
+import Container from "@mui/material/Container";
 import { FacebookEmbed } from "react-social-media-embed";
 
 const postUrls = [
@@ -88,7 +89,9 @@ function App() {
     <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       <div className="overlay"></div>
       <header className="App-header">
+        <Container maxWidth="150">
         <DaysUntilFriday />
+        </Container>
         <div>
           <div style={{ height: "20px" }}></div>
         </div>
