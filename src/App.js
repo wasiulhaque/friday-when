@@ -71,19 +71,15 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 function App() {
-  // Check if the user's dark mode preference is already stored in the local storage
   const storedDarkMode = localStorage.getItem("darkMode");
   const [darkMode, setDarkMode] = useState(storedDarkMode === "true");
 
-  // Function to toggle dark mode
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    // Save the new preference to local storage
     localStorage.setItem("darkMode", newDarkMode);
   };
 
-  // Update the CSS class when the dark mode state changes
   useEffect(() => {
     document.documentElement.classList.toggle("dark-mode", darkMode);
   }, [darkMode]);
@@ -93,6 +89,9 @@ function App() {
       <div className="overlay"></div>
       <header className="App-header">
         <DaysUntilFriday />
+        <div>
+          <div style={{ height: "20px" }}></div>
+        </div>
         <FormGroup>
           <Tooltip
             title={`${darkMode ? "Enable Light Mode" : "Enable Dark Mode"}`}
@@ -109,7 +108,7 @@ function App() {
             />
           </Tooltip>
         </FormGroup>
-        <div
+        {/* <div
           className="facebook-embed-container"
           style={{
             display: "flex",
@@ -118,13 +117,14 @@ function App() {
           }}
         >
           <FacebookEmbed url={randomPostUrl} width={550} />
-        </div>
-        {/* <p>
+        </div> */}
+        <p>
           <img
             src="https://media.tenor.com/6GIi9tonjeEAAAAd/parkour-the-office.gif"
-            height="300px"
+            height="200px"
+            style ={{ borderRadius: "16px" }}
           />
-        </p> */}
+        </p>
       </header>
     </div>
   );
